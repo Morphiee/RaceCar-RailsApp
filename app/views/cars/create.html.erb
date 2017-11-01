@@ -1,0 +1,13 @@
+<h1>Welcome to the car simulator!</h1>
+<%= @return_string %>
+
+<form action="/cars/create" method="get">
+    <input type="text" name="make"/>
+    <br>
+    <input type="number" name="model"/>
+    <br>
+    <input type="submit" name="submit" value="Create Car">
+</form>
+
+<%= params[:make] %>
+<%= params[:model] %>

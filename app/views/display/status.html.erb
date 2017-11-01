@@ -1,0 +1,27 @@
+<h1>Here's your <%= @car.make %>!</h1>
+
+Make: <%= @car.make %>
+<br>
+Model: <%= @car.model %>
+<br>
+Speed: <%= @car.show_speed %>
+<br>
+Lights On: <%= !(@car.toggle_lights) %>
+<br>
+Parking Break: <%= !(@car.toggle_parking) %>
+<br>
+
+<form action="/display/accelerating" method="get">
+    <input type="submit" name="accelerate" value="Accelerate"/>
+</form>
+<form action="/display/brake" method="get">
+    <input type="submit" name="brake" value="Brake"/>
+</form>
+<form action="/display/lights" method="get">
+    <input type="submit" name="lights" value="Toggle Lights">
+</form>
+<form action="/display/parking" method="get">
+    <input type="radio" name="parking" value="On"/> On <br>
+    <input type="radio" name="parking" value="Off"/> Off <br>
+    <input type="submit" name="parking" value="Set Brake"/> <br>
+</form>
